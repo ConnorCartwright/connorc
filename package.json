@@ -1,0 +1,26 @@
+{
+  "name": "connorc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grunt dev",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "connor cartwright",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-sass": "^1.2.1",
+    "grunt-scss-lint": "^0.3.8",
+    "jit-grunt": "^0.10.0",
+    "jshint-stylish": "^2.2.1",
+    "pug": "^0.1.0",
+    "time-grunt": "^1.4.0"
+  }
+}
