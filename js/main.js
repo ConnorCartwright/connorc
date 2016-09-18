@@ -1,6 +1,15 @@
 'use strict';
 
-var sectionClick = require('./bubbles');
+var sectionChange = require('./section-change');
+var preloadImages = require('./preload');
+
+preloadImages([
+'../img/background/top/1.jpg',
+ '../img/background/top/2.jpg',
+   '../img/background/top/3.jpg',
+ '../img/background/top/4.jpg',
+ '../img/background/top/5.jpg'
+]);
 
 $('.top-nav-icon').on('mouseover', function() {
    var $topSection = $('.top-section');
