@@ -416,6 +416,147 @@ h4 {
 
 .bottom-section {
     display: none;
-    height: 100%;
+    margin-top: 54px;
+    text-align: center;
     width: 100%;
+
+    .content {
+        display: inline-block;
+        margin-top: 40px;
+        text-align: center;
+        width: 800px;
+
+        .bottom-area {
+            display: none;
+            transition: .6s;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    &.open {
+        display: block;
+    }
+
+    &.about {
+        color: rgba( 57, 130, 198, .8 );
+    }
+
+    &.experience {
+        color: rgba( 230, 126, 34, .8 );
+    }
+
+    &.education {
+        color: rgba( 160, 76, 172, .8 );
+    }
+
+    &.contact {
+        color: rgba( 38, 178, 178, .8 );
+    }
+}
+
+.timeline {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    .experience & {
+        .line {
+            height: 605px;
+
+            .node {
+                background: $orange;
+            }
+        }
+    }
+
+    .education & {
+        .line {
+            height: 205px;
+
+            .node {
+                background: $purple;
+            }
+        }
+    }
+
+    .line {
+        background: $grey;
+        left: 196px;
+        margin-top: 8px;
+        position: absolute;
+        width: 2px;
+
+        .node {
+            border-radius: 100%;
+            height: 10px;
+            left: -4px;
+            position: absolute;
+            width: 10px;
+
+            $top: 200;
+
+            @for $i from 2 through 5 {
+                &:nth-child( #{$i} ) {
+                    margin-top: #{$top}px;
+                    $top: $top + 200;
+                }
+            }
+        }
+    }
+
+    .timeline-section {
+        height: 200px;
+        text-align: left;
+        width: 100%;
+
+        .side {
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+
+            .timeline-icon {
+                height: 140px;
+                margin: 30px;
+                width: 140px;
+
+                &.smartzer {
+                    height: 120px;
+                    margin: 40px;
+                    width: 120px;
+                }
+
+                &.aston {
+                    margin: 10px 30px 40px;
+                }
+            }
+        }
+
+        .info {
+            display: inline-block;
+            vertical-align: top;
+            width: 75%;
+
+            .timeline-header {
+                font-size: 18px;
+                margin: 0 20px;
+            }
+
+            .timeline-period {
+                font-size: 11px;
+                margin: 4px 24px;
+            }
+
+            .timeline-info {
+                color: $black;
+                font-size: 14px;
+                line-height: 20px;
+                margin-left: 32px;
+            }
+        }
+    }
+
+
 }
