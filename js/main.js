@@ -12,22 +12,26 @@ preloadImages([
 ]);
 
 $('.top-nav-icon').on('mouseover', function() {
-   var $topSection = $('.top-section');
-   var type = $(this).attr('class').split(' ')[1];
+   if (!$('.top-section').hasClass('minimised')) {
+      var $topSection = $('.top-section');
+      var type = $(this).attr('class').split(' ')[1];
 
-   type = type.substring(0, type.length - 5); // Remove the '-icon'
+      type = type.substring(0, type.length - 5); // Remove the '-icon'
 
-   if (!$topSection.hasClass(type)) {
-      $topSection.addClass(type);
+      if (!$topSection.hasClass(type)) {
+         $topSection.addClass(type);
+      }
    }
 }).on('mouseout', function() {
-   var $topSection = $('.top-section');
-   var type = $(this).attr('class').split(' ')[1];
+   if (!$('.top-section').hasClass('minimised')) {
+      var $topSection = $('.top-section');
+      var type = $(this).attr('class').split(' ')[1];
 
-   type = type.substring(0, type.length - 5); // Remove the '-icon'
+      type = type.substring(0, type.length - 5); // Remove the '-icon'
 
-   if ($topSection.hasClass(type)) {
-      $topSection.removeClass(type);
+      if ($topSection.hasClass(type)) {
+         $topSection.removeClass(type);
+      }
    }
 });
 
