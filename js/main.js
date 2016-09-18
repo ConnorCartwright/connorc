@@ -35,9 +35,10 @@ $('.top-nav-icon').on('mouseover', function() {
    }
 });
 
-$('.top-nav-section').on('click', function() {
-   var type = $(this).attr('class').split(' ')[1];
+$('.connorc').on('click', '.top-section.minimised .section-text-link', function() {
+   sectionChange.textChange($(this));
+});
 
-   console.log('type: ' + type);
-   sectionClick(type);
+$('.top-nav-section').on('click', function() {
+   sectionChange.iconChange($(this));
 });
